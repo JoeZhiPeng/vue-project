@@ -1,0 +1,216 @@
+{
+    "menus": [{
+        "menuId": "1",
+        "menuName": "内容管理",
+        "menuPid": "-1",
+        "menuIcon": "ios-paper",
+        "frontRouting": "",
+        "children": [{
+            "menuId": "11",
+            "menuName": "文章管理",
+            "menuPid": "1",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/About/article"
+        }, {
+            "menuId": "12",
+            "menuName": "评论管理",
+            "menuPid": "1",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/About/discuss"
+        }, {
+            "menuId": "13",
+            "menuName": "告警管理",
+            "menuPid": "1",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/lbs/AlarmManage"
+        }]
+    }, {
+        "menuId": "2",
+        "menuName": "监控服务",
+        "menuPid": "-1",
+        "menuIcon": "ios-people",
+        "frontRouting": "",
+        "children": [{
+            "menuId": "21",
+            "menuName": "实时监控",
+            "menuPid": "2",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/monitor/RealTimeMonitor"
+        }, {
+            "menuId": "22",
+            "menuName": "视频回放",
+            "menuPid": "2",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/monitor/VideoPlayBack"
+        }]
+    }, {
+        "menuId": "3",
+        "menuName": "系统管理",
+        "menuPid": "-1",
+        "menuIcon": "ios-stats",
+        "frontRouting": "",
+        "children": [{
+            "menuId": "31",
+            "menuName": "用户(组)管理",
+            "menuPid": "3",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/sysmgr/AccountGroup"
+        }, {
+            "menuId": "32",
+            "menuName": "角色管理",
+            "menuPid": "3",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/sysmgr/RoleManage"
+        }, {
+            "menuId": "33",
+            "menuName": "组织机构管理",
+            "menuPid": "3",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/sysmgr/DepartManage"
+        }]
+    }, {
+        "menuId": "4",
+        "menuName": "运营管理",
+        "menuPid": "-1",
+        "menuIcon": "ios-people",
+        "frontRouting": "",
+        "children": [{
+            "menuId": "41",
+            "menuName": "车辆管理",
+            "menuPid": "4",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/bizmgr/CarManage"
+        }, {
+            "menuId": "42",
+            "menuName": "驾驶员管理",
+            "menuPid": "4",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/bizmgr/DriverManage"
+        }, {
+            "menuId": "43",
+            "menuName": "设备管理",
+            "menuPid": "4",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/bizmgr/EqumentManage"
+        }, {
+            "menuId": "44",
+            "menuName": "规则设置",
+            "menuPid": "4",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/bizmgr/RuleSet"
+        }, {
+            "menuId": "45",
+            "menuName": "监控设置",
+            "menuPid": "4",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/bizmgr/MoitorSet"
+        }]
+    }, {
+        "menuId": "5",
+        "menuName": "统计报表",
+        "menuPid": "-1",
+        "menuIcon": "ios-stats",
+        "frontRouting": "",
+        "children": [{
+            "menuId": "51",
+            "menuName": "里程报表统计",
+            "menuPid": "5",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/report/MileageReport"
+        }, {
+            "menuId": "52",
+            "menuName": "行程明细报表",
+            "menuPid": "5",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/report/TripReport"
+        }, {
+            "menuId": "53",
+            "menuName": "告警汇总报表",
+            "menuPid": "5",
+            "children": [],
+            "menuIcon": "",
+            "frontRouting": "/report/AlarmReport"
+        }]
+    }],
+    "perms": [{
+            "frontRouting": "/lbs/CarGps",
+            "perm": ["carGps_set"]
+        },
+        {
+            "frontRouting": "/lbs/Trail",
+            "perm": ["trail_export"]
+        },
+        {
+            "frontRouting": "/lbs/AlarmManage",
+            "perm": ["alarm_manage_read", "alarm_manage_export", "alarm_manage_site"]
+        },
+        {
+            "frontRouting": "/monitor/RealTimeMonitor",
+            "perm": ["monitor_clear", "monitor_play", "monitor_stop", "monitor_all", "monitor_speak", "monitor_accept", "monitor_info"]
+        },
+        {
+            "frontRouting": "/monitor/VideoPlayBack",
+            "perm": ["videoBack_play", "videoBack_time", "videoBack_file", "videoBack_download"]
+        },
+        {
+            "frontRouting": "/sysmgr/AccountGroup",
+            "perm": ["account_account", "account_group", "account_add", "account_delete", "account_modify", "account_check", "account_role", "group_add", "group_acount_groud", "group_check", "group_modify", "group_delete"]
+        },
+        {
+            "frontRouting": "/sysmgr/RoleManage",
+            "perm": ["role_add", "role_delete", "role_modify", "role_check"]
+        },
+        {
+            "frontRouting": "/sysmgr/DepartManage",
+            "perm": ["depart_add", "depart_delete", "depart_modify"]
+        },
+        {
+            "frontRouting": "/bizmgr/CarManage",
+            "perm": ["car_add", "car_delete", "car_Modify", "car_import", "car_check", "car_export", "equment_Rule", "driver_Rule"]
+        },
+        {
+            "frontRouting": "/bizmgr/DriverManage",
+            "perm": ["driver_add", "driver_delete", "driver_Modify", "driver_check", "driver_import", "driver_export"]
+        },
+        {
+            "frontRouting": "/bizmgr/EqumentManage",
+            "perm": ["equment_add", "equment_delete", "equment_Modify", "equment_import", "equment_export"]
+        },
+        {
+            "frontRouting": "/bizmgr/RuleSet",
+            "perm": ["rules_sets", "rules_sets_add", "rules_sets_modify", "rules_sets_delete", "rules_sets_check", "rules_sets_config"
+            ]
+        },
+        {
+            "frontRouting": "/bizmgr/MoitorSet",
+            "perm": ["set_add", "set_delete", "set_Modify", "set_check", "set_export"]
+        },
+        {
+            "frontRouting": "/report/MileageReport",
+            "perm": ["mileage_day", "mileage_month", "mileage_day_export", "mileage_month_export"]
+        },
+        {
+            "frontRouting": "/report/TripReport",
+            "perm": ["trip_export"]
+        },
+        {
+            "frontRouting": "/report/AlarmReport",
+            "perm": ["alarm_day", "alarm_month", "alarm_day_export", "alarm_month_export"]
+        }
+    ]
+}
