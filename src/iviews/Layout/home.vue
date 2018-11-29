@@ -26,10 +26,10 @@
                 conHeight: '400px'
             }
         },
-        created(){
+        created() {
         　　this.getWindowHeight()
         },
-        methods:{
+        methods: {
         　　getWindowHeight(){
         　　　　this.conHeight = window.innerHeight - 64 + 'px';
         　　}

@@ -26,10 +26,14 @@
             }
         },
         mounted() {
-            
+            this.getMenu();
         },
         methods: {
-
+            getMenu() {
+                this.$instance.get('./static/dataJson/menu.json', '').then(res => {
+                    debugger;
+                })
+            }
         }
     }
 </script>
