@@ -1,6 +1,6 @@
 <template>
     <div class= ''>
-
+        401
     </div>
 </template>
 
@@ -9,14 +9,14 @@
         data () {
             return {
 
-                }
-            },
+            }
+        },
         components: {
 
         }
     }
 </script>
 
-<style rel='stylesheet/scss' lang='scss' scoped>
+<style>
 
 </style>

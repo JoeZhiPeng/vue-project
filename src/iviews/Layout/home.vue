@@ -17,9 +17,7 @@
     import vueContent from './main.vue'
     export default {
         components: {
-            vueHeader,
-            vueMenu,
-            vueContent
+            vueHeader,  vueMenu, vueContent
         },
         data() {
             return {

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import axios from 'axios'
-import Qs from 'qs'
+import qs from 'qs'
 import router from '@/router';
 
 const instance = axios.create({
@@ -42,7 +42,6 @@ instance.interceptors.response.use( data => {
     }
     return data;
 }, err => {
-    debugger;
     //对返回的错误进行一些处理  状态504  404  403 处理
     if(err && err.response) {
         switch (err.response.status) {
@@ -90,12 +89,12 @@ instance.interceptors.response.use( data => {
                 err.message = 'http版本不支持该请求';
                 break;
             default:
-                err.message = `连接错误${err.response.status}`;
+                err.message = `连接错误$${err.response.status}`;
         }
     } else {
         err.message = "连接到服务器失败";
     }
-    message.error({message : err.message});
+    // this.$Message.error(err.message);
     return Promise.reject(err);
 })
 

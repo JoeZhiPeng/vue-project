@@ -14,26 +14,26 @@
     </Sider>
 </template>
 <script>
-    import menusArr from '@static/dataJson/menu.json'
+    import { mapGetters } from 'vuex';
     export default {
         props: {
             menuHeight: String
         },
         data() {
             return {
-                menus: menusArr.menus,
-                perms: menusArr.perms
+
             }
+        },
+        computed: {
+            ...mapGetters([
+                'menus', 'perms'
+            ])
         },
         mounted() {
-            this.getMenu();
+            
         },
         methods: {
-            getMenu() {
-                this.$instance.get('./static/dataJson/menu.json', '').then(res => {
-                    debugger;
-                })
-            }
+            
         }
     }
 </script>
