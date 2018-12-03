@@ -22,17 +22,6 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/proxy': {
-        target: 'https://www.easy-mock.com/mock/5c00d3a057282f4cecbc6518',
-        changeOrigin: true,//允许跨域
-        pathRewrite: {
-          '^/proxy': ''
-        }
-      }
-    },
-
-    // Various Dev Server settings
     host: 'localhost',
     port: 8080,
     autoOpenBrowser: false,
@@ -43,6 +32,15 @@ module.exports = {
     showEslintErrorsInOverlay: false,
     devtool: 'cheap-module-eval-source-map',
     cacheBusting: true,
-    cssSourceMap: true
+    cssSourceMap: true,
+    proxyTable: {
+      '/proxy': {
+        target: 'https://www.easy-mock.com/mock/5c00d3a057282f4cecbc6518',
+        changeOrigin: true,//允许跨域
+        pathRewrite: {
+          '^/proxy': ''
+        }
+      }
+    },
   }
 }
