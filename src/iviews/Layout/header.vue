@@ -3,32 +3,34 @@
         <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <MenuItem name="1">
+                <MenuItem :name="item.menuId" v-for="item in menus" :key="item.menuId" @click.native="firstMenuClick(item)">
                     <Icon type="ios-navigate"></Icon>
-                    Item 1
-                </MenuItem>
-                <MenuItem name="2">
-                    <Icon type="ios-keypad"></Icon>
-                    Item 2
-                </MenuItem>
-                <MenuItem name="3">
-                    <Icon type="ios-analytics"></Icon>
-                    Item 3
-                </MenuItem>
-                <MenuItem name="4">
-                    <Icon type="ios-paper"></Icon>
-                    Item 4
+                    {{item.menuName}}
                 </MenuItem>
             </div>
         </Menu>
     </Header>
 </template>
 <script>
+    import { mapGetters } from 'vuex';
     export default {
-      data() {
-          return {
+        data() {
+            return {
               
-          }
-      }  
+            }
+        },
+        computed: {
+            ...mapGetters([
+                'menus'
+            ])
+        },
+        mounted() {
+            
+        },
+        methods: {
+            firstMenuClick(item) {
+                this.$emit('getMeunObj', item)
+            }
+        }
     }
 </script>

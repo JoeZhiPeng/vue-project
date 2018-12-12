@@ -1,9 +1,9 @@
 <template>
     <div class="layout">
         <Layout>
-            <vue-header></vue-header>
+            <vue-header @getMeunObj="getSendMeun"></vue-header>
             <Layout>
-                <vue-menu :menuHeight='conHeight'></vue-menu>
+                <vue-menu :menuHeight='conHeight' :menus='menus'></vue-menu>
                 <Layout>
                     <vue-content></vue-content>
                 </Layout>
@@ -21,7 +21,8 @@
         },
         data() {
             return {
-                conHeight: '400px'
+                conHeight: '400px',
+                menus: null
             }
         },
         created() {
@@ -30,7 +31,10 @@
         methods: {
         　　getWindowHeight(){
         　　　　this.conHeight = window.innerHeight - 64 + 'px';
-        　　}
+        　　},
+            getSendMeun(data) {
+                this.menus = data.children
+            }
         }
     }
 </script>
