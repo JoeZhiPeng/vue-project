@@ -44,7 +44,7 @@
                     if (valid) {
                         vm.$store.dispatch('Login', vm.formInline).then((res) => {
                             vm.$store.dispatch('getUserInfo').then((res) => {
-                                vm.$router.push({ path: '/' });  
+                                vm.$router.push({ path: '/About/article' });  
                             })
                         })
                     } else {

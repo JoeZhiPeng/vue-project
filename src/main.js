@@ -19,8 +19,10 @@ Vue.prototype.$instance = instance; //将封装的axios挂载到vue的原型上
 router.beforeEach((to, from, next) => {
   if (Cookies.get('refresh')) {
     if (!store.getters.accont) { //判断当前是否是刷新页面的操作，是的话，重新获取菜单
-      store.dispatch('getUserInfo')
-      next()
+      store.dispatch('getUserInfo').then((res)=> {
+        next()
+      })
+    
     } else {
       if (to.path == '/') {
         next()

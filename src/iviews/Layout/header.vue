@@ -25,11 +25,15 @@
             ])
         },
         mounted() {
-            
+            this.getStartMenu()   
         },
         methods: {
             firstMenuClick(item) {
                 this.$emit('getMeunObj', item)
+            },
+            getStartMenu() {
+                let startMenu = this.$store.state.permission.menus[0];
+                this.$emit('getMeunObj', startMenu)
             }
         }
     }

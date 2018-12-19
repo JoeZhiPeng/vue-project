@@ -33,14 +33,14 @@ const user = {
         },
         getUserInfo({dispatch, commit, state}) {
             return new Promise( (resolve, reject) => {
-                // instance.post('/proxy/findMenuPerms').then(res => {
-                instance.post('/proxy/find/newMenus').then(res => {
+                instance.post('/proxy/findMenuPerms').then(res => {
+                // instance.post('/proxy/find/newMenus').then(res => {
                     let accont = Cookies.get('accont')
                     commit('SET_ACCONT', accont)
                     let menusArr = res.data.data.menus
-                    // let permsArr = res.data.data.perms
+                    let permsArr = res.data.data.perms
                     dispatch('GetMenus', menusArr) // 菜单
-                    // dispatch('GetPerms', permsArr) // 权限
+                    dispatch('GetPerms', permsArr) // 权限
                     resolve(res)
                 }).catch(err => {
                     reject(res.data.errorMsg)

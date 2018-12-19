@@ -7,8 +7,8 @@
                     {{item.menuName}}
                 </template>
                 <MenuItem v-if="item.children && item.children.length > 0" v-for="(i, index) in item.children" :key="i.menuId" :name=i.menuPid-index>
-                    <!-- <router-link :to="i.frontRouting" tag="span">{{i.menuName}}</router-link> -->
-                    {{i.menuName}}
+                    <router-link :to="i.frontRouting" tag="span">{{i.menuName}}</router-link>
+                    <!-- {{i.menuName}} -->
                 </MenuItem>
             </Submenu>
         </Menu>
